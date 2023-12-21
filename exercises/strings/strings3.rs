@@ -7,17 +7,20 @@
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    ???
+    String::from(input.trim())
 }
 
-fn compose_me(input: &str) -> String {
+fn compose_me(mut input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    ???
+    // let mut new = String::from(input);
+    // new.push_str(" world!");
+    let result = format!("{} {}", input, "world!");
+    result
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
-    ???
+    String::from(input.replace("cars", "balloons"))
 }
 
 #[cfg(test)]
